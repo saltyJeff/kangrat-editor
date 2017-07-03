@@ -8,6 +8,7 @@
 			var muiTags = require('riot-mui');
 			var tags = require('./tags.js');
 			var electron = require('electron');
+			var mobx = require('mobx');
 			window.state = electron.remote.getGlobal('state');
 		</script>
 		<link rel="stylesheet" href="../node_modules/riot-mui/build/styles/riot-mui.min.css">
@@ -26,7 +27,9 @@
 		<kangrat-editor></kangrat-editor>
 		<script>
 			riot.mount('*');
-			route('/load');
+			mobx.observe(state, () => {
+				route(state.currentPage);
+			});
 		</script>
 	</body>
 </html>

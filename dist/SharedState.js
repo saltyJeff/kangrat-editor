@@ -46,6 +46,7 @@ var mobx = require("mobx");
 var path = require("path");
 var SharedState = (function () {
     function SharedState() {
+        this.currentPage = 'load';
         this.save = null;
     }
     SharedState.prototype.loadSave = function (metaPath) {
@@ -57,11 +58,16 @@ var SharedState = (function () {
                         return [4, this.save.readFrom(path.dirname(metaPath))];
                     case 1:
                         _a.sent();
+                        console.log('save loaded');
+                        this.currentPage = 'schemas';
                         return [2];
                 }
             });
         });
     };
+    __decorate([
+        mobx.observable
+    ], SharedState.prototype, "currentPage");
     __decorate([
         mobx.observable
     ], SharedState.prototype, "save");

@@ -11,8 +11,8 @@
 	</material-navbar>
 	<router>
 		<route path="/load"><kangrat-editor-load></kangrat-editor-load></route>
-		<route path="schemas"></route>
-		<route path="/template"><p>Templates</p></route>
+		<route path="/schemas"></route>
+		<route path="/template"><p>Template</p></route>
 		<route path="/data"><p>Data</p></route>
 	</router>
 </kangrat-editor>
