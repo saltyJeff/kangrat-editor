@@ -1,0 +1,37 @@
+{
+  "name": "kangrat-editor",
+  "version": "1.0.0",
+  "description": "an editor for the kangrat static site generator",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saltyJeff/kangrat-editor.git"
+  },
+  "author": "saltyJeff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saltyJeff/kangrat-editor/issues"
+  },
+  "homepage": "https://github.com/saltyJeff/kangrat-editor#readme",
+  "dependencies": {
+    "electron": "^1.6.11",
+    "kangrat": "github:saltyJeff/kangrat",
+    "mobx": "^3.1.16",
+    "riot": "^3.6.1",
+    "riot-mui": "^0.1.0",
+    "riot-route": "^3.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-riot": "^1.1.1",
+    "gulp-typescript": "^3.1.7",
+    "tslint": "^5.4.3",
+    "typescript": "^2.4.1",
+    "typescript-simple": "^8.0.1"
+  }
+}
